@@ -45,7 +45,7 @@ if not st.session_state.logged_in:
     password = st.text_input("password", type="password")
     if st.button("Login"):
         with st.spinner("Authenticating..."):
-            auth = login_df[(login_df["Username"] == username) & (login_df["password"] == password)]
+            auth = login_df[(login_df["Username"] == username) & (login_df["password"] ==password)]
             if not auth.empty:
                 st.session_state.logged_in = True
                 st.session_state.emp_id = auth.iloc[0]["Emp ID"]
