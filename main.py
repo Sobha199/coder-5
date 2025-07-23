@@ -50,7 +50,7 @@ if not st.session_state.logged_in:
                 st.session_state.logged_in = True
                 st.session_state.emp_id = auth.iloc[0]["Emp ID"]
                 st.success("Login successful!")
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.error("Invalid credentials")
 
